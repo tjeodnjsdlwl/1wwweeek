@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background: #ccc;
+        }
+        header{
+            height: 100px;
+            background: #000;
+        }
+        
+        main{
+            width: 800px;
+            /* background: #f00; */
+           margin: 10px auto;
+        }
+        main > div{margin-bottom: 10px;}
+
+        .box1{
+            height: 200px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <div class="box1">box</div>
+
+        <style>
+            .box2{
+                display: flex;
+                gap: 10px;
+            }
+            .box2 div{
+                flex: 1;
+                height: 200px;
+                background: #fff;
+            }
+        </style>
+
+        <!-- gap -->
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+
+        <style>
+            .box3{
+                display: flex;
+            }
+            .box3 > *{
+                flex: 1;
+                height: 100px;
+                background: #f00;
+            }
+            .box3 > * + *{
+                margin-left: 10px;
+            }
+        </style>
+
+
+        <!-- 올빼미선택자 -->
+        <div class="box3">
+            <div>1</div>
+            <section>2</section>
+            <article>3</article>
+            <aside>4</aside>
+            <div>5</div>
+        </div>
+
+        <style>
+            .box4{
+                display: flex;
+                justify-content: space-between;
+                background: #fff;
+                padding: 10px;
+            }
+            .box4 div{
+                height: 100px;
+                background: #f00;
+                width: calc(50% - 5px);
+            }
+        </style>
+
+
+        <!-- 스페이스비트윈 -->
+        <div class="box4">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </main>
+</body>
+</html>

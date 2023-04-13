@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+
+        /* common */
+        .inner{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+
+        header{
+            height: 100px;
+            background: #000;
+        }
+
+        .box1{
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .box1 div{
+            position: relative;
+            flex: 1;
+            height: 200px;
+            background: #ccc;
+        }
+
+        .box1 .btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .box1 .btn.prev{left: 10px;}
+        .box1 .btn.next{right: 10px;}
+
+
+        .box2{
+            height: 100px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <div class="inner">
+            <section class="box1">
+                <div>1</div>
+                <div>2
+                    <button class="btn prev">prev</button>
+                    <button class="btn next">next</button>
+                </div>
+            </section>
+        </div>
+        <section class="box2">
+            bannnnnner
+        </section>
+        <div class="inner">
+
+            <style>
+                .box3{
+                    padding: 10px;
+                    margin: 10px 0;
+                    background: #ccc;
+                }
+                .box3 ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap:10px;
+                    padding: 10px;
+                    background: #fff;
+                }
+                .box3 ul li{
+                    height: 100px;
+                    background: #f00;
+                }
+                .box3 ul li:nth-child(1){width: calc(70% - 5px);}
+                .box3 ul li:nth-child(2){width: calc(30% - 5px);}
+                .box3 ul li:nth-child(3){width: calc(20% - 5px);}
+                .box3 ul li:nth-child(4){width: calc(80% - 5px);}
+            </style>
+
+            <!-- flex -->
+            <section class="box3">
+                <ul>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </ul>
+            </section>
+
+
+
+            <style>
+                .box3-1{
+                    padding: 10px;
+                    margin: 10px 0;
+                    background: #ccc;
+                }
+                .box3-1 ul{
+                    display: grid;
+                    grid-template-columns: repeat(10,1fr);
+                    grid-template-rows: repeat(2,100px);
+                    /* grid-template-areas:
+                    "a4 a3"
+                    "a2 a1"; */
+                    gap: 10px;
+
+                    padding: 10px;
+                    background: #fff;
+                }
+                .box3-1 ul li{
+                    background: #f00;
+                    font-size: 50px;
+                }
+                .box3-1 ul li:nth-child(1){
+                    grid-column: span 7;
+                    /* grid-area:a1; */
+                }
+                .box3-1 ul li:nth-child(2){
+                    grid-column: span 3;
+                    /* grid-area:a2; */
+                }
+                .box3-1 ul li:nth-child(3){
+                    grid-column: span 2;
+                    /* grid-area:a3; */
+                }
+                .box3-1 ul li:nth-child(4){
+                    grid-column: span 8;
+                    /* grid-area:a4; */
+                }
+            </style>
+
+
+            <!-- grid -->
+            <section class="box3-1">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </section>
+
+            <style>
+                .box4{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    padding: 10px;
+                    background: #ccc;
+                    margin-bottom: 10px;
+                }
+                .box4 h2{
+                }
+                .box4 .wrap{
+                    display: flex;
+                }
+                .box4 .wrap a{
+                    width: 50px;
+                    height: 50px;
+                    background: #fff;
+                }
+            </style>
+
+            <section class="box4">
+                <h2>공지사항</h2>
+                <div class="wrap">
+                    <a href="">prev</a>
+                    <a href="">next</a>
+                </div>
+            </section>
+
+
+            <style> 
+                .box5{}
+                .box5 ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-right:-10px;
+                }
+                .box5 ul li{
+                    width: 25%;
+                    margin-bottom: 10px;
+                }
+                .box5 ul a{
+                   display: flex;
+                   flex-direction: column;
+                    margin-right: 10px;
+                    padding: 10px;
+                    background: #ccc;
+                }
+                .box5 ul strong{
+                  
+                    padding: 10px;
+                    margin: 10px 0;
+                    background: #fff;
+                }
+
+                .box5 ul p{
+                    padding: 10px;
+                    background: #fff;
+                }
+            </style>
+
+            <section class="box5">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <strong>Lorem, ipsum dolor.</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

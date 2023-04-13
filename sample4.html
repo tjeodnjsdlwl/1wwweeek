@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        header{}
+        header .box{
+            position: relative;
+            height: 200px;
+            background: #ccc;
+        }
+
+        .gnb{
+            background: #888;
+        }
+        .gnb ul{
+            display: flex;
+            justify-content: center;
+            line-height: 30px;
+            padding: 10px 0;
+         
+        }
+        .gnb ul li{
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <h1><a href="">logo</a></h1>
+            <div class="sns">sns</div>
+            <div class="login">login</div>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        main{
+            width: 800px;
+            margin: 10px auto;
+        }
+
+
+        .box1{
+            padding: 10px;
+            background: #ccc;
+            margin-bottom: 10px;
+        }
+        .box1 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background: #fff;
+        }
+        .box1 .left{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: #0f0;
+            flex-grow: 1;
+        }
+        .box1 .left li{
+            background: #f00;
+            width: calc((100% - 20px)/3);
+            height: 100px;
+        }
+
+        .box1 .right{
+            background: #f00;
+            width: 150px;
+        }
+    </style>
+
+    <main>
+        <!-- flex -->
+        <section class="box1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="right">
+                    w150
+                </div>
+            </div>
+        </section>
+
+
+        <style>
+             .box1-1{
+            padding: 10px;
+            background: #ccc;
+            margin-bottom: 10px;
+        }
+        .box1-1 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1-1 .bottom{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background: #fff;
+        }
+        .box1-1 .left{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,100px);
+            gap: 10px;
+            background: #0f0;
+            flex-grow: 1;
+        }
+        .box1-1 .left li{
+            background: #f00;
+        }
+
+        .box1-1 .right{
+            background: #f00;
+            width: 150px;
+        }
+        </style>
+
+
+        <!-- grid -->
+        <section class="box1-1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="right">
+                    w150
+                </div>
+            </div>
+        </section>
+
+
+
+        <style>
+            .box2{
+                padding: 10px;
+                background: #ccc;
+            }
+            .box2 ul{}
+            .box2 ul li+li{
+                margin-top: 10px;
+            }
+
+            .box2 ul a{
+                display: grid;
+                grid-template-columns: 150px auto;
+                gap: 10px;
+                /* display: flex; */
+            }
+            .box2 ul img{
+                /* width: 150px; */
+            }
+            .box2 ul p{
+                background: #fff;
+                /* flex-grow: 1; */
+                /* margin-left: 10px; */
+            }
+        </style>
+
+
+        <section class="box2">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
